@@ -111,13 +111,6 @@ void min(List* list){ //procurando numero maximo
 }
 
 void insert(List* list, int num){
-/*
-    Node* node = list->head; //ponteiro apontando para a cabeça
-    Node* node2;
-    node2->num = num;
-    list->head = node2->num;
-    printList(list);
-  */
     Node* node = list->head;
     int flag = 0;
     while (node != NULL)//verifica se o número já existe no conjunto.
@@ -138,63 +131,6 @@ void insert(List* list, int num){
         list->head = node2;
         list->size++;
     }
-
-
-
-    /*Node* node = list->head;
-    int flag = 0;
-
-    while(node != NULL){
-        if(node->num == num ){
-            flag++;
-            break;
-        }
-        node = node->next;
-    }
-    if(flag == 0){
-        Node* temp =
-    }
-}
-
-
-    else{
-        Node* current = atPos(list, index); //pega index da posicao atual
-
-        if(current != NULL){
-            Node* previous = atPos(list, index - 1); //pega index da posicao atual - 1
-
-            Node* newNode = (Node*) malloc(sizeof(Node));
-            newNode->num = num; //novo nó vai receber o numero
-
-            previous->next = newNode; //a posição atual - 1 vai receber o valor de newNode
-            newNode->next = current; //e newNode vai apontar para o próximo elemento, que no caso será a "posição atual antiga"
-            list->size++; //incrementa tamanho da lista
-        }
-    }
-
-    No* aux2 = conj->head;
-    int flag = 0;
-    while (aux2 != NULL)//verifica se o número já existe no conjunto.
-    {
-        if (aux2->info == info)
-        {
-            flag++;
-            break;
-        }
-        aux2 = aux2->next;
-    }
-
-    if (flag == 0)//Insere número no conjunto.
-    {
-        No* aux = cria_no(info);
-
-        aux->info = info;
-        aux->next = conj->head;
-        conj->head = aux;
-        conj->size++;
-    }
-}
-*/
 }
 void erase(List* list, int index){
     if(index == 0){
